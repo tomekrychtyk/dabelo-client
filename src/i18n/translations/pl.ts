@@ -16,7 +16,11 @@ const plJSON = {
   dietVitaminSummary: 'Witaminy',
   dietMineralSummary: 'Minerały',
   dietMyRecepies: 'Moje przepisy',
-  dietAddProduct: 'Dodaj produkt'
+  dietAddProduct: 'Dodaj produkt',
+  dietCalories: 'Kalorie',
+  dietCarbs: 'Węglowodany',
+  dietProteins: 'Białko',
+  dietFat: 'Tłuszcz'
 };
 
 export default plJSON;

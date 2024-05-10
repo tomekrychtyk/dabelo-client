@@ -71,7 +71,7 @@ const Calories: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
             pb: 3
           }}
         >
-          {t('Calories')}
+          {t('dietCalories')}
         </Typography>
         <LinearProgress
           value={percentage}

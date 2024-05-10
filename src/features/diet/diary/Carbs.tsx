@@ -1,3 +1,4 @@
+import { FC, ReactElement } from 'react';
 import {
   Card,
   CardContent,
@@ -9,9 +10,18 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import FoodBankTwoToneIcon from '@mui/icons-material/FoodBankTwoTone';
+import { getPercentage, getColor } from './utils';
 
-function Carbs() {
+type Props = {
+  quantity: number;
+  goalQuantity: number;
+};
+
+const Carbs: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
   const { t }: { t: any } = useTranslation();
+
+  const percentage = getPercentage(quantity, goalQuantity);
+  const color = getColor(percentage);
 
   const AvatarPrimary = styled(Avatar)(
     ({ theme }) => `
@@ -38,7 +48,7 @@ function Carbs() {
         action={
           <>
             <Typography align="right" variant="h2">
-              459 / 255
+              {quantity} / {goalQuantity}
             </Typography>
             <Typography
               align="right"
@@ -61,12 +71,16 @@ function Carbs() {
             pb: 3
           }}
         >
-          {t('Carbs')}
+          {t('dietCarbs')}
         </Typography>
-        <LinearProgress value={100} color="error" variant="determinate" />
+        <LinearProgress
+          value={percentage}
+          color={color}
+          variant="determinate"
+        />
       </CardContent>
     </Card>
   );
-}
+};
 
 export default Carbs;

@@ -47,7 +47,7 @@ const DietDiary = () => {
               <Proteins quantity={56} goalQuantity={150} />
             </Grid>
             <Grid item sm={3} xs={6}>
-              <Carbs />
+              <Carbs quantity={144} goalQuantity={254} />
             </Grid>
             <Grid item sm={3} xs={6}>
               <Fat quantity={12} goalQuantity={50} />
