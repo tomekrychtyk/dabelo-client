@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
 import SidebarMenu from './SidebarMenu/SidebarMenu';
-import Logo from '@/assets/dabelo-logo.webp';
+import Logo from '@/assets/dabelo-logo-2.png';
 
 const SidebarWrapper = styled(Box)(
   ({ theme }) => `
@@ -51,7 +51,7 @@ export default function Sidebar() {
           >
             <Box display="flex">
               <img src={Logo} width={36} />
-              <Box sx={{ pl: '8px' }}>
+              <Box sx={{ pl: '8px', pt: '12px' }}>
                 <Link href="/" sx={{ color: theme.colors.alpha.trueWhite[70] }}>
                   DABELO
                 </Link>

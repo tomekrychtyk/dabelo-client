@@ -1,4 +1,8 @@
-import AnalyticsTwoToneIcon from '@mui/icons-material/AnalyticsTwoTone';
+import {
+  ControlPointTwoTone,
+  DateRangeTwoTone,
+  FastfoodTwoTone
+} from '@mui/icons-material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 
@@ -10,6 +14,7 @@ export interface MenuItem {
 
   items?: MenuItem[];
   name: string;
+  key: string;
 }
 
 export interface MenuItems {
@@ -23,18 +28,21 @@ const menuItems: MenuItems[] = [
     items: [
       {
         name: 'Dziennik',
-        icon: AnalyticsTwoToneIcon,
-        link: '/dite/diary'
+        key: 'diet/diary',
+        icon: DateRangeTwoTone,
+        link: '/diet/diary'
       },
       {
         name: 'Moje przepisy',
-        icon: AnalyticsTwoToneIcon,
-        link: '/diet/my-recepies'
+        icon: FastfoodTwoTone,
+        link: '/diet/my-recepies',
+        key: 'diet/my-recepies'
       },
       {
         name: 'Dodaj produkt',
-        icon: AnalyticsTwoToneIcon,
-        link: '/diet/add-product'
+        icon: ControlPointTwoTone,
+        link: '/diet/add-product',
+        key: 'diet/add-product'
       }
     ]
   }
