@@ -28,7 +28,7 @@ const menuItems: MenuItems[] = [
     items: [
       {
         name: 'Dziennik',
-        key: 'diet/diary',
+        key: 'dietDiary',
         icon: DateRangeTwoTone,
         link: '/diet/diary'
       },
@@ -36,13 +36,13 @@ const menuItems: MenuItems[] = [
         name: 'Moje przepisy',
         icon: FastfoodTwoTone,
         link: '/diet/my-recepies',
-        key: 'diet/my-recepies'
+        key: 'dietMyRecepies'
       },
       {
         name: 'Dodaj produkt',
         icon: ControlPointTwoTone,
         link: '/diet/add-product',
-        key: 'diet/add-product'
+        key: 'dietAddProduct'
       }
     ]
   }

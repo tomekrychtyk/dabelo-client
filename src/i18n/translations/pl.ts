@@ -1,8 +1,22 @@
 const plJSON = {
+  generalLastYear: 'Ostatni rok',
+  generalLastMonth: 'Ostatni miesiąc',
+  generalLastWeek: 'Ostatni tydzień',
+  generalYesterday: 'Wczoraj',
+  generalToday: 'Dzisiaj',
+  generalExport: 'Eksportuj',
+  generalGrams: 'g',
   diet: 'Dieta',
-  'diet/diary': 'Dziennik',
-  'diet/my-recepies': 'Moje przepisy',
-  'diet/add-product': 'Dodaj produkt'
+  dietDiary: 'Dziennik',
+  dietDiaryTitle: 'Dziennik posiłków',
+  dietDiaryDescription: 'Szczegółowe informacje na temat twoich posiłków',
+  dietMealListTitle: 'Lista posiłków',
+  dietMealListDescription: '',
+  dietDailySummary: 'Dzienne podsumowanie',
+  dietVitaminSummary: 'Witaminy',
+  dietMineralSummary: 'Minerały',
+  dietMyRecepies: 'Moje przepisy',
+  dietAddProduct: 'Dodaj produkt'
 };
 
 export default plJSON;

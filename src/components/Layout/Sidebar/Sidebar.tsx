@@ -1,7 +1,6 @@
 import Scrollbar from '@/components/Scrollbar/Scrollbar';
 import {
   Box,
-  //   Drawer,
   alpha,
   styled,
   Divider,
@@ -9,9 +8,8 @@ import {
   useTheme,
   lighten
 } from '@mui/material';
-import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
 import SidebarMenu from './SidebarMenu/SidebarMenu';
-import Logo from '@/assets/dabelo-logo-2.png';
+import Logo from '@/assets/orange-logo.png';
 
 const SidebarWrapper = styled(Box)(
   ({ theme }) => `
