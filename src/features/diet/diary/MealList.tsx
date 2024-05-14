@@ -3,6 +3,7 @@ import {
   Box,
   Typography,
   Divider,
+  Grid,
   useTheme,
   styled
 } from '@mui/material';
@@ -80,16 +81,195 @@ const MealList = () => {
                 pb: 4
               }}
             >
-              <Typography>Siema</Typography>
-              <Typography
+              <Grid container>
+                <Grid item xs={4}>
+                  <Typography>Płatki kukurydziane</Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  150 g
+                </Grid>
+                <Grid item xs={6}>
+                  <Grid container>
+                    <Grid item xs={3}>
+                      15 B
+                    </Grid>
+                    <Grid item xs={3}>
+                      22 W
+                    </Grid>
+                    <Grid item xs={3}>
+                      11 T
+                    </Grid>
+                    <Grid item xs={3}>
+                      144 kcal
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid item xs={4}>
+                  <Typography>Mleko 2%</Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  250 ml
+                </Grid>
+                <Grid item xs={6}>
+                  <Grid container>
+                    <Grid item xs={3}>
+                      17 B
+                    </Grid>
+                    <Grid item xs={3}>
+                      35 W
+                    </Grid>
+                    <Grid item xs={3}>
+                      5 T
+                    </Grid>
+                    <Grid item xs={3}>
+                      220 kcal 320 kcal
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid item xs={4} />
+                <Grid item xs={2} />
+                <Grid item xs={6}>
+                  <Grid container sx={{ fontWeight: 700 }}>
+                    <Grid item xs={3}>
+                      <Typography sx={{ fontWeight: 700 }} color="primary">
+                        32 B
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Typography sx={{ fontWeight: 700 }} color="primary">
+                        57 W
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Typography sx={{ fontWeight: 700 }} color="primary">
+                        16 T
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Typography sx={{ fontWeight: 700 }} color="primary">
+                        364 kcal
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </TimelineContent>
+          </TimelineItem>
+
+          <TimelineItem
+            sx={{
+              p: 0
+            }}
+          >
+            <TimelineOppositeContent
+              sx={{
+                width: '85px',
+                flex: 'none'
+              }}
+              color="text.secondary"
+            >
+              12:30
+            </TimelineOppositeContent>
+            <TimelineSeparator
+              sx={{
+                position: 'relative'
+              }}
+            >
+              <TimelineDot
                 sx={{
-                  pt: 1
+                  marginTop: 0,
+                  top: theme.spacing(1.2)
                 }}
-                variant="body2"
-                color="text.primary"
-              >
-                You sold <b>10 ETH</b> for <b>48,500 USD</b>.
-              </Typography>
+                variant="outlined"
+                color="primary"
+              />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent
+              sx={{
+                pb: 4
+              }}
+            >
+              <Grid container>
+                <Grid item xs={4}>
+                  <Typography>Płatki kukurydziane</Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  150 g
+                </Grid>
+                <Grid item xs={6}>
+                  <Grid container>
+                    <Grid item xs={3}>
+                      15 B
+                    </Grid>
+                    <Grid item xs={3}>
+                      22 W
+                    </Grid>
+                    <Grid item xs={3}>
+                      11 T
+                    </Grid>
+                    <Grid item xs={3}>
+                      144 kcal
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid item xs={4}>
+                  <Typography>Mleko 2%</Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  250 ml
+                </Grid>
+                <Grid item xs={6}>
+                  <Grid container>
+                    <Grid item xs={3}>
+                      17 B
+                    </Grid>
+                    <Grid item xs={3}>
+                      35 W
+                    </Grid>
+                    <Grid item xs={3}>
+                      5 T
+                    </Grid>
+                    <Grid item xs={3}>
+                      220 kcal
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid item xs={4} />
+                <Grid item xs={2} />
+                <Grid item xs={6}>
+                  <Grid container sx={{ fontWeight: 700 }}>
+                    <Grid item xs={3}>
+                      <Typography sx={{ fontWeight: 700 }} color="primary">
+                        32 B
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Typography sx={{ fontWeight: 700 }} color="primary">
+                        57 W
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Typography sx={{ fontWeight: 700 }} color="primary">
+                        16 T
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Typography sx={{ fontWeight: 700 }} color="primary">
+                        364 kcal
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
             </TimelineContent>
           </TimelineItem>
         </Timeline>
