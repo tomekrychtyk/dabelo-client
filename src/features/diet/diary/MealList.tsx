@@ -1,4 +1,18 @@
-import { Card, Box, Typography, Divider, Grid, useTheme } from '@mui/material';
+import {
+  Card,
+  Box,
+  Typography,
+  Divider,
+  Grid,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+  Table,
+  TableContainer,
+  useTheme,
+  styled
+} from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -7,6 +21,31 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import MealListItem from './MealListItem';
+
+const TableHeadWrapper = styled(TableHead)(
+  ({ theme }) => `
+      .MuiTableCell-root {
+          text-transform: none;
+          font-weight: normal;
+          font-size: ${theme.typography.pxToRem(16)};
+          padding-top: 0;
+          padding-bottom: ${theme.spacing(1)};
+      }
+
+      .MuiTableRow-root {
+          background: transparent;
+      }
+  `
+);
+
+const TableWrapper = styled(Table)(
+  () => `
+    .MuiTableCell-root {
+        border-bottom: 0;
+    }
+  `
+);
 
 const MealList = () => {
   const { t }: { t: any } = useTranslation();
@@ -63,82 +102,38 @@ const MealList = () => {
                 pb: 4
               }}
             >
-              <Grid container>
-                <Grid item xs={3}>
-                  <Typography>Płatki kukurydziane</Typography>
-                </Grid>
-                <Grid item xs={3}>
-                  150 g
-                </Grid>
-                <Grid item xs={6}>
-                  <Grid container>
-                    <Grid item xs={3}>
-                      15 g białka
-                    </Grid>
-                    <Grid item xs={3}>
-                      22 g węglowodanow
-                    </Grid>
-                    <Grid item xs={3}>
-                      11 T
-                    </Grid>
-                    <Grid item xs={3}>
-                      144 kcal
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid container>
-                <Grid item xs={3}>
-                  <Typography>Mleko 2%</Typography>
-                </Grid>
-                <Grid item xs={3}>
-                  250 ml
-                </Grid>
-                <Grid item xs={6}>
-                  <Grid container>
-                    <Grid item xs={3}>
-                      17 B
-                    </Grid>
-                    <Grid item xs={3}>
-                      35 W
-                    </Grid>
-                    <Grid item xs={3}>
-                      5 T
-                    </Grid>
-                    <Grid item xs={3}>
-                      220 kcal
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid container>
-                <Grid item xs={4} />
-                <Grid item xs={2} />
-                <Grid item xs={6}>
-                  <Grid container sx={{ fontWeight: 700 }}>
-                    <Grid item xs={3}>
-                      <Typography sx={{ fontWeight: 700 }} color="primary">
-                        32 B
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={3}>
-                      <Typography sx={{ fontWeight: 700 }} color="primary">
-                        57 W
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={3}>
-                      <Typography sx={{ fontWeight: 700 }} color="primary">
-                        16 T
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={3}>
-                      <Typography sx={{ fontWeight: 700 }} color="primary">
-                        364 kcal
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
+              <TableContainer>
+                <TableWrapper>
+                  <TableHeadWrapper>
+                    <TableRow>
+                      <TableCell>Produkt</TableCell>
+                      <TableCell align="center">Waga (g)</TableCell>
+                      <TableCell align="center">Białko (g)</TableCell>
+                      <TableCell align="center">Węglowodany (g)</TableCell>
+                      <TableCell align="center">Tłuszcz (g)</TableCell>
+                      <TableCell align="center">Kalorie (kcal)</TableCell>
+                    </TableRow>
+                  </TableHeadWrapper>
+                  <TableBody>
+                    <MealListItem
+                      productName="Mleko 2%"
+                      weight={250}
+                      proteins={18}
+                      carbs={20}
+                      fat={7}
+                      kcal={119}
+                    />
+                    <MealListItem
+                      productName="Płatki kukurydziane"
+                      weight={250}
+                      proteins={18}
+                      carbs={20}
+                      fat={7}
+                      kcal={119}
+                    />
+                  </TableBody>
+                </TableWrapper>
+              </TableContainer>
             </TimelineContent>
           </TimelineItem>
         </Timeline>
