@@ -20,7 +20,33 @@ const plJSON = {
   dietCalories: 'Kalorie',
   dietCarbs: 'Węglowodany',
   dietProteins: 'Białko',
-  dietFat: 'Tłuszcz'
+  dietFat: 'Tłuszcz',
+  dietVitaminsSummary: 'Witaminy',
+  dietMineralsSummry: 'Minerały',
+
+  vitA: 'Witamina A',
+  vitD: 'Witamina D',
+  vitE: 'Witamina E',
+  vitK: 'Witamina K',
+  vitC: 'Witamina D',
+  vitB1: 'Witamina B1',
+  vitB2: 'Witamina B2',
+  vitB3: 'Witamina B3',
+  vitB5: 'Witamina B5',
+  vitB6: 'Witamina B6',
+  vitB7: 'Witamina B7',
+  vitB9: 'Witamina B9',
+  vitB12: ' Witamina B12',
+
+  potassium: 'Potas',
+  calcium: 'Wapń',
+  phosphorus: 'Fosfor',
+  magnesium: 'Magnez',
+  iron: 'Żelazo',
+  zinc: 'Cynk',
+  copper: 'Miedź',
+  manganium: 'Mangan',
+  selenium: 'Selen'
 };
 
 export default plJSON;
