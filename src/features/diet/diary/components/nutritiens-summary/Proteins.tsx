@@ -10,14 +10,17 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import FastfoodTwoToneIcon from '@mui/icons-material/FastfoodTwoTone';
-import { getPercentage, getColor } from './utils';
+import { getPercentage, getColor } from '../../utils';
 
 type Props = {
   quantity: number;
   goalQuantity: number;
 };
 
-const Proteins: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
+export const Proteins: FC<Props> = ({
+  quantity,
+  goalQuantity
+}): ReactElement => {
   const { t }: { t: any } = useTranslation();
 
   const percentage = getPercentage(quantity, goalQuantity);
@@ -82,5 +85,3 @@ const Proteins: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
     </Card>
   );
 };
-
-export default Proteins;

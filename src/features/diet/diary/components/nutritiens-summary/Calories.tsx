@@ -9,16 +9,22 @@ import {
   styled
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import LocalPharmacyTwoToneIcon from '@mui/icons-material/LocalPharmacyTwoTone';
-import { getPercentage, getColor } from './utils';
+import KitchenTwoToneIcon from '@mui/icons-material/KitchenTwoTone';
+import { getPercentage, getColor } from '../../utils';
 
 type Props = {
   quantity: number;
   goalQuantity: number;
 };
 
-const Fat: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
+export const Calories: FC<Props> = ({
+  quantity,
+  goalQuantity
+}): ReactElement => {
   const { t }: { t: any } = useTranslation();
+
+  const percentage = getPercentage(quantity, goalQuantity);
+  const color = getColor(percentage);
 
   const AvatarPrimary = styled(Avatar)(
     ({ theme }) => `
@@ -30,9 +36,6 @@ const Fat: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
 `
   );
 
-  const percentage = getPercentage(quantity, goalQuantity);
-  const color = getColor(percentage);
-
   return (
     <Card
       sx={{
@@ -42,7 +45,7 @@ const Fat: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
       <CardHeader
         avatar={
           <AvatarPrimary>
-            <LocalPharmacyTwoToneIcon />
+            <KitchenTwoToneIcon />
           </AvatarPrimary>
         }
         action={
@@ -55,7 +58,7 @@ const Fat: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
               variant="subtitle2"
               color="text.secondary"
             >
-              {t('g')}
+              {t('kCal')}
             </Typography>
           </>
         }
@@ -71,7 +74,7 @@ const Fat: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
             pb: 3
           }}
         >
-          {t('dietFat')}
+          {t('dietCalories')}
         </Typography>
         <LinearProgress
           value={percentage}
@@ -82,5 +85,3 @@ const Fat: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
     </Card>
   );
 };
-
-export default Fat;

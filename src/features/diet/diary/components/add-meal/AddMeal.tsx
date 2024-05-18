@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import { Grid, Button } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers';
 
-const AddMeal = () => {
+export const AddMeal = () => {
   const [value, setValue] = useState<dayjs.Dayjs | null>(dayjs());
   const { t }: { t: any } = useTranslation();
 
@@ -27,5 +27,3 @@ const AddMeal = () => {
     </>
   );
 };
-
-export default AddMeal;

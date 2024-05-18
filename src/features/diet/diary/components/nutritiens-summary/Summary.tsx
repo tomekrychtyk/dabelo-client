@@ -37,7 +37,7 @@ const AccordionSummaryWrapper = styled(AccordionSummary)(
   `
 );
 
-const Summary: FC<Props> = ({
+export const Summary: FC<Props> = ({
   data,
   title,
   showFirstNItemsByDefault,
@@ -104,5 +104,3 @@ const Summary: FC<Props> = ({
     </Card>
   );
 };
-
-export default Summary;

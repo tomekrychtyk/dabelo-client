@@ -12,7 +12,7 @@ interface PageTitleWrapperProps {
   children?: ReactNode;
 }
 
-const PageTitleWrapper: FC<PageTitleWrapperProps> = ({ children }) => {
+export const PageTitleWrapper: FC<PageTitleWrapperProps> = ({ children }) => {
   return (
     <>
       <PageTitle className="MuiPageTitle-wrapper">{children}</PageTitle>
@@ -23,5 +23,3 @@ const PageTitleWrapper: FC<PageTitleWrapperProps> = ({ children }) => {
 PageTitleWrapper.propTypes = {
   children: PropTypes.node.isRequired
 };
-
-export default PageTitleWrapper;

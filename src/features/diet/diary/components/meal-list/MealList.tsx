@@ -21,7 +21,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import MealListItem from './MealListItem';
+import { MealListItem } from './MealListItem';
 
 const TableHeadWrapper = styled(TableHead)(
   ({ theme }) => `
@@ -47,7 +47,7 @@ const TableWrapper = styled(Table)(
   `
 );
 
-const MealList = () => {
+export const MealList = () => {
   const { t }: { t: any } = useTranslation();
   const theme = useTheme();
 
@@ -149,5 +149,3 @@ const MealList = () => {
     </Card>
   );
 };
-
-export default MealList;

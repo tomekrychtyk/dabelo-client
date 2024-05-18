@@ -9,19 +9,16 @@ import {
   styled
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import KitchenTwoToneIcon from '@mui/icons-material/KitchenTwoTone';
-import { getPercentage, getColor } from './utils';
+import LocalPharmacyTwoToneIcon from '@mui/icons-material/LocalPharmacyTwoTone';
+import { getPercentage, getColor } from '../../utils';
 
 type Props = {
   quantity: number;
   goalQuantity: number;
 };
 
-const Calories: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
+export const Fat: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
   const { t }: { t: any } = useTranslation();
-
-  const percentage = getPercentage(quantity, goalQuantity);
-  const color = getColor(percentage);
 
   const AvatarPrimary = styled(Avatar)(
     ({ theme }) => `
@@ -33,6 +30,9 @@ const Calories: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
 `
   );
 
+  const percentage = getPercentage(quantity, goalQuantity);
+  const color = getColor(percentage);
+
   return (
     <Card
       sx={{
@@ -42,7 +42,7 @@ const Calories: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
       <CardHeader
         avatar={
           <AvatarPrimary>
-            <KitchenTwoToneIcon />
+            <LocalPharmacyTwoToneIcon />
           </AvatarPrimary>
         }
         action={
@@ -55,7 +55,7 @@ const Calories: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
               variant="subtitle2"
               color="text.secondary"
             >
-              {t('kCal')}
+              {t('g')}
             </Typography>
           </>
         }
@@ -71,7 +71,7 @@ const Calories: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
             pb: 3
           }}
         >
-          {t('dietCalories')}
+          {t('dietFat')}
         </Typography>
         <LinearProgress
           value={percentage}
@@ -82,5 +82,3 @@ const Calories: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
     </Card>
   );
 };
-
-export default Calories;

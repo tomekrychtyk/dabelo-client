@@ -10,14 +10,14 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import FoodBankTwoToneIcon from '@mui/icons-material/FoodBankTwoTone';
-import { getPercentage, getColor } from './utils';
+import { getPercentage, getColor } from '../../utils';
 
 type Props = {
   quantity: number;
   goalQuantity: number;
 };
 
-const Carbs: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
+export const Carbs: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
   const { t }: { t: any } = useTranslation();
 
   const percentage = getPercentage(quantity, goalQuantity);
@@ -82,5 +82,3 @@ const Carbs: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
     </Card>
   );
 };
-
-export default Carbs;

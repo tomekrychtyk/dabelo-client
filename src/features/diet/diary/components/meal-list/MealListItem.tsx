@@ -32,7 +32,7 @@ const IconButtonWrapper = styled(IconButton)(
   `
 );
 
-const MealListItem: FC<Props> = ({
+export const MealListItem: FC<Props> = ({
   productName,
   weight,
   proteins,
@@ -95,5 +95,3 @@ const MealListItem: FC<Props> = ({
     </TableRow>
   );
 };
-
-export default MealListItem;
