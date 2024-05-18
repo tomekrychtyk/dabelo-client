@@ -65,7 +65,7 @@ const LabelWrapper = styled('span')(
 `
 );
 
-const Label: FC<LabelProps> = ({
+export const Label: FC<LabelProps> = ({
   className,
   color = 'secondary',
   children,
@@ -81,5 +81,3 @@ const Label: FC<LabelProps> = ({
     </LabelWrapper>
   );
 };
-
-export default Label;

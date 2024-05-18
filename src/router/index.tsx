@@ -1,7 +1,6 @@
 import { Suspense, lazy, FC, ComponentProps } from 'react';
 import { RouteObject } from 'react-router';
-import Layout from '@/components/Layout/Layout';
-import SuspenseLoader from '@/components/SuspenseLoader/SuspenseLoader';
+import { SuspenseLoader, Layout } from '@/components';
 
 const Loader = (Component: FC) => (props: ComponentProps<FC>) => (
   <Suspense fallback={<SuspenseLoader />}>

@@ -8,7 +8,7 @@ interface LayoutProps {
   children?: ReactNode;
 }
 
-const Layout: FC<LayoutProps> = () => {
+export const Layout: FC<LayoutProps> = () => {
   const theme = useTheme();
   return (
     <>
@@ -48,5 +48,3 @@ const Layout: FC<LayoutProps> = () => {
     </>
   );
 };
-
-export default Layout;

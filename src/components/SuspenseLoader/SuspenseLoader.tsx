@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import NProgress from 'nprogress';
 import { Box, CircularProgress } from '@mui/material';
 
-function SuspenseLoader() {
+export function SuspenseLoader() {
   useEffect(() => {
     NProgress.start();
 
@@ -28,5 +28,3 @@ function SuspenseLoader() {
     </Box>
   );
 }
-
-export default SuspenseLoader;
