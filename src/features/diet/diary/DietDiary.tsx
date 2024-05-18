@@ -25,58 +25,52 @@ const DietDiary = () => {
         <PageHeader />
       </PageTitleWrapper>
 
+      <Grid container sx={{ px: 4 }} spacing={4}>
+        <Grid item sm={3} xs={12}>
+          <Calories quantity={2300} goalQuantity={2400} />
+        </Grid>
+        <Grid item sm={3} xs={12}>
+          <Proteins quantity={56} goalQuantity={150} />
+        </Grid>
+        <Grid item sm={3} xs={12}>
+          <Carbs quantity={144} goalQuantity={254} />
+        </Grid>
+        <Grid item sm={3} xs={12}>
+          <Fat quantity={12} goalQuantity={50} />
+        </Grid>
+      </Grid>
+
       <Grid
-        sx={{
-          px: 4
-        }}
         container
-        direction="row"
-        justifyContent="center"
-        alignItems="stretch"
+        sx={{ p: 4 }}
         spacing={4}
+        justifyContent="center"
+        direction="row"
+        wrap="nowrap"
       >
-        <Grid item md={12} xs={12}>
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="stretch"
-            spacing={4}
-          >
-            <Grid item sm={3} xs={6}>
-              <Calories quantity={2300} goalQuantity={2400} />
-            </Grid>
-            <Grid item sm={3} xs={6}>
-              <Proteins quantity={56} goalQuantity={150} />
-            </Grid>
-            <Grid item sm={3} xs={6}>
-              <Carbs quantity={144} goalQuantity={254} />
-            </Grid>
-            <Grid item sm={3} xs={6}>
-              <Fat quantity={12} goalQuantity={50} />
-            </Grid>
+        <AddMeal />
+      </Grid>
 
-            <AddMeal />
+      <Grid container sx={{ px: 4, pb: 4 }}>
+        <Grid item sm={12} sx={{ overflow: 'auto' }}>
+          <MealList />
+        </Grid>
+      </Grid>
 
-            <Grid item sm={12}>
-              <MealList />
-            </Grid>
-
-            <Grid item sm={6}>
-              <Summary
-                data={VITAMIN_LIST}
-                title={t('dietVitaminsSummary')}
-                expanded
-              />
-            </Grid>
-            <Grid item sm={6}>
-              <Summary
-                data={MINERAL_LIST}
-                title={t('dietMineralsSummry')}
-                expanded
-              />
-            </Grid>
-          </Grid>
+      <Grid container sx={{ px: 4 }} spacing={4}>
+        <Grid item sm={6} xs={12}>
+          <Summary
+            data={VITAMIN_LIST}
+            title={t('dietVitaminsSummary')}
+            expanded
+          />
+        </Grid>
+        <Grid item sm={6} xs={12}>
+          <Summary
+            data={MINERAL_LIST}
+            title={t('dietMineralsSummry')}
+            expanded
+          />
         </Grid>
       </Grid>
     </>

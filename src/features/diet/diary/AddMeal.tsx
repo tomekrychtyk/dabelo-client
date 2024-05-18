@@ -9,29 +9,22 @@ const AddMeal = () => {
   const { t }: { t: any } = useTranslation();
 
   return (
-    <Grid container>
-      <Grid item sm={1}></Grid>
-      <Grid item sm={10}>
-        <Grid container sx={{ m: 4 }}>
-          <Grid item sm={8}>
-            <Button fullWidth variant="contained" sx={{ height: 52 }}>
-              {t('Add meal')}
-            </Button>
-          </Grid>
-          <Grid item sm={4}>
-            <DatePicker
-              maxDate={dayjs()}
-              value={value}
-              onChange={(newValue) => {
-                setValue(newValue);
-              }}
-              sx={{ mx: 2 }}
-            />
-          </Grid>
-        </Grid>
+    <>
+      <Grid item sm={8}>
+        <Button fullWidth variant="contained" sx={{ height: 52 }}>
+          {t('Add meal')}
+        </Button>
       </Grid>
-      <Grid item sm={1}></Grid>
-    </Grid>
+      <Grid item>
+        <DatePicker
+          maxDate={dayjs()}
+          value={value}
+          onChange={(newValue) => {
+            setValue(newValue);
+          }}
+        />
+      </Grid>
+    </>
   );
 };
 

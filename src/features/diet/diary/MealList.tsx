@@ -102,7 +102,14 @@ const MealList = () => {
                 pb: 4
               }}
             >
-              <TableContainer>
+              <TableContainer
+                sx={{
+                  width: {
+                    xs: '400px',
+                    sm: '100%'
+                  }
+                }}
+              >
                 <TableWrapper>
                   <TableHeadWrapper>
                     <TableRow>
