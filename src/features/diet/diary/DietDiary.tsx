@@ -52,7 +52,7 @@ const DietDiary = () => {
       </Grid>
 
       <Grid container sx={{ px: 4, pb: 4 }}>
-        <Grid item sm={12} sx={{ overflow: 'auto' }}>
+        <Grid item sm={12} sx={{ overflow: { xs: 'auto', sm: 'visible' } }}>
           <MealList />
         </Grid>
       </Grid>
