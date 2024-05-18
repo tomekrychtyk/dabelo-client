@@ -112,6 +112,7 @@ const MealList = () => {
                       <TableCell align="center">Węglowodany (g)</TableCell>
                       <TableCell align="center">Tłuszcz (g)</TableCell>
                       <TableCell align="center">Kalorie (kcal)</TableCell>
+                      <TableCell align="center"></TableCell>
                     </TableRow>
                   </TableHeadWrapper>
                   <TableBody>
