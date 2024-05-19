@@ -3,15 +3,11 @@ import {
   Box,
   Typography,
   Divider,
-  Grid,
-  TableHead,
   TableRow,
   TableCell,
   TableBody,
-  Table,
   TableContainer,
-  useTheme,
-  styled
+  useTheme
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import Timeline from '@mui/lab/Timeline';
@@ -22,30 +18,8 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import { MealListItem } from './MealListItem';
-
-const TableHeadWrapper = styled(TableHead)(
-  ({ theme }) => `
-      .MuiTableCell-root {
-          text-transform: none;
-          font-weight: normal;
-          font-size: ${theme.typography.pxToRem(16)};
-          padding-top: 0;
-          padding-bottom: ${theme.spacing(1)};
-      }
-
-      .MuiTableRow-root {
-          background: transparent;
-      }
-  `
-);
-
-const TableWrapper = styled(Table)(
-  () => `
-    .MuiTableCell-root {
-        border-bottom: 0;
-    }
-  `
-);
+import { TableHeadWrapper } from './TableHeadWrapper';
+import { TableWrapper } from './TableWrapper';
 
 export const MealList = () => {
   const { t }: { t: any } = useTranslation();
@@ -113,12 +87,14 @@ export const MealList = () => {
                 <TableWrapper>
                   <TableHeadWrapper>
                     <TableRow>
-                      <TableCell>Produkt</TableCell>
-                      <TableCell align="center">Waga (g)</TableCell>
-                      <TableCell align="center">Białko (g)</TableCell>
-                      <TableCell align="center">Węglowodany (g)</TableCell>
-                      <TableCell align="center">Tłuszcz (g)</TableCell>
-                      <TableCell align="center">Kalorie (kcal)</TableCell>
+                      <TableCell>{t('Product')}</TableCell>
+                      <TableCell align="center">{t('Weight')} (g)</TableCell>
+                      <TableCell align="center">{t('Proteins')} (g)</TableCell>
+                      <TableCell align="center">{t('Carbs')} (g)</TableCell>
+                      <TableCell align="center">{t('Fat')} (g)</TableCell>
+                      <TableCell align="center">
+                        {t('Calories')} (kcal)
+                      </TableCell>
                       <TableCell align="center"></TableCell>
                     </TableRow>
                   </TableHeadWrapper>
