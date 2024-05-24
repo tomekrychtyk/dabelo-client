@@ -1,53 +1,13 @@
-import { useState, SyntheticEvent } from 'react';
-import { useDebounceCallback } from 'usehooks-ts';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import dayjs from 'dayjs';
-import { Grid, Button, TextField, Card, Autocomplete } from '@mui/material';
+import { Grid, Button, TextField, Card } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers';
+import { ProductSearch } from './ProductSearch';
 
 export const AddMeal = () => {
   const [value, setValue] = useState<dayjs.Dayjs | null>(dayjs());
-  const [foundProducts, setFoundProducts] = useState<string[]>([]);
-  const [selectedProducts, setSelectedProducts] = useState<
-    { weight: number; name: string }[]
-  >([]);
   const { t }: { t: any } = useTranslation();
-
-  const products = ['milk', 'cheese', 'honey', 'goat milk'];
-
-  const handleProductSearch = (value: string) => {
-    if (!value) {
-      setFoundProducts([]);
-    } else {
-      const productsToSet = products.filter((item) => item.includes(value));
-      console.log('prod to set', productsToSet);
-      setFoundProducts(productsToSet);
-    }
-  };
-
-  const debouncedSetFoundProducts = useDebounceCallback(
-    handleProductSearch,
-    500
-  );
-
-  const handleProductSelect = (
-    event: SyntheticEvent<Element, Event>,
-    value: string | null
-  ) => {
-    console.log('SELECTEED', selectedProducts);
-    if (value) {
-      setSelectedProducts((prevSelectedProducts) => {
-        return [
-          ...prevSelectedProducts,
-          {
-            weight: 0,
-            name: value
-          }
-        ];
-      });
-      setFoundProducts([]);
-    }
-  };
 
   return (
     <>
@@ -101,23 +61,7 @@ export const AddMeal = () => {
             />
           </Grid>
           <Grid item sm={12}>
-            <Autocomplete
-              autoSelect
-              onChange={handleProductSelect}
-              filterOptions={(x) => x}
-              disablePortal
-              freeSolo
-              options={foundProducts}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Product"
-                  onChange={(event) =>
-                    debouncedSetFoundProducts(event.target.value)
-                  }
-                />
-              )}
-            />
+            <ProductSearch />
           </Grid>
         </Grid>
       </Card>

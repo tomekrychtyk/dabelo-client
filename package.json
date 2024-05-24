@@ -32,6 +32,7 @@
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
     "graphql": "^16.8.1",
+    "graphql-request": "5",
     "i18next": "^23.11.4",
     "nprogress": "^0.2.0",
     "qs": "^6.12.1",

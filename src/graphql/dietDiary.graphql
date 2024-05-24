@@ -1,0 +1,8 @@
+query DietProducts($name: String) {
+  dietProducts(name: $name) {
+    id
+    name
+    vitA
+    vitD
+  }
+}
