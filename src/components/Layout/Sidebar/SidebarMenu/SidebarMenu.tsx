@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import SidebarMenuItem from './SidebarMenuItem';
 import MenuWrapper from './MenuWrapper';
 import SubMenuWrapper from './SubMenuWrapper';
-import menuItems, { MenuItem } from './items';
+import { MenuItem, menuItems } from './items';
 
 const renderItems = (items: MenuItem[], path: string) => {
   const { t }: { t: any } = useTranslation();
@@ -27,7 +27,7 @@ const renderItems = (items: MenuItem[], path: string) => {
               open={partialMatch}
               active={partialMatch}
               key={item.name}
-              name={t(item.key)}
+              name={t(item.tKey)}
               icon={item.icon}
               link={item.link}
             >

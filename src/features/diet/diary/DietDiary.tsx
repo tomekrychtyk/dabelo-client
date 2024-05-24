@@ -16,7 +16,7 @@ const DietDiary = () => {
   return (
     <>
       <Helmet>
-        <title>{t('dietDiaryTitle')}</title>
+        <title>{t('Diet diary')}</title>
       </Helmet>
 
       <PageHeader />
@@ -25,16 +25,7 @@ const DietDiary = () => {
         <MainSummary />
       </Grid>
 
-      <Grid
-        container
-        sx={{ p: 4 }}
-        spacing={4}
-        justifyContent="center"
-        direction="row"
-        wrap="nowrap"
-      >
-        <AddMeal />
-      </Grid>
+      <AddMeal />
 
       <Grid container sx={{ px: 4, pb: 4 }}>
         <Grid item sm={12} sx={{ overflow: { xs: 'auto', sm: 'visible' } }}>

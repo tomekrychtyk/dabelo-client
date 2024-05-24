@@ -71,7 +71,7 @@ export const Carbs: FC<Props> = ({ quantity, goalQuantity }): ReactElement => {
             pb: 3
           }}
         >
-          {t('dietCarbs')}
+          {t('Carbs')}
         </Typography>
         <LinearProgress
           value={percentage}

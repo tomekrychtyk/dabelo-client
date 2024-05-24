@@ -40,7 +40,6 @@ const AccordionSummaryWrapper = styled(AccordionSummary)(
 export const Summary: FC<Props> = ({
   data,
   title,
-  showFirstNItemsByDefault,
   expanded
 }: Props): ReactElement => {
   const [isExpanded, setExpanded] = useState(expanded);
@@ -79,7 +78,7 @@ export const Summary: FC<Props> = ({
                 return (
                   <Fragment key={item.key}>
                     <ListItem>
-                      <Typography>{t(item.key)}</Typography>
+                      <Typography>{t(item.tKey)}</Typography>
                     </ListItem>
                     <ListItem>
                       <LinearProgress
@@ -94,7 +93,7 @@ export const Summary: FC<Props> = ({
               })}
               <ListItem sx={{ justifyContent: 'center' }}>
                 <Button variant="outlined" onClick={handleToggle}>
-                  Zwiń
+                  {t('Hide')}
                 </Button>
               </ListItem>
             </List>

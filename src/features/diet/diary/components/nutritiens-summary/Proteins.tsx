@@ -74,7 +74,7 @@ export const Proteins: FC<Props> = ({
             pb: 3
           }}
         >
-          {t('dietProteins')}
+          {t('Proteins')}
         </Typography>
         <LinearProgress
           value={percentage}

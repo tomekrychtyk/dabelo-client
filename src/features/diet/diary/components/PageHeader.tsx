@@ -48,23 +48,23 @@ export function PageHeader() {
   const periods = [
     {
       value: 'today',
-      text: t('generalToday')
+      text: t('Today')
     },
     {
       value: 'yesterday',
-      text: t('generalYesterday')
+      text: t('Yesterday')
     },
     {
       value: 'last_week',
-      text: t('generalLastWeek')
+      text: t('Last Week')
     },
     {
       value: 'last_month',
-      text: t('generalLastMonth')
+      text: t('Last Month')
     },
     {
       value: 'last_year',
-      text: t('generalLastYear')
+      text: t('Last Year')
     }
   ];
 
@@ -86,10 +86,12 @@ export function PageHeader() {
           </AvatarPageTitle>
           <Box>
             <Typography variant="h3" component="h3" gutterBottom>
-              {t('dietDiaryTitle')}
+              {t('Diet diary')}
             </Typography>
             <Typography variant="subtitle2">
-              {t('dietDiaryDescription')}
+              {t(
+                'Track your daily calories intake, create reports, check if you have enough of micro and macro nutritiens in your diet'
+              )}
             </Typography>
           </Box>
         </Box>
@@ -133,7 +135,7 @@ export function PageHeader() {
           </Menu>
 
           <Button variant="contained" startIcon={<DocumentScannerTwoTone />}>
-            {t('generalExport')}
+            {t('Export')}
           </Button>
         </Box>
       </Box>

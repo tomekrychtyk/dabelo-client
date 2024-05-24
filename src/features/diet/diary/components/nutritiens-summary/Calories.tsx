@@ -74,7 +74,7 @@ export const Calories: FC<Props> = ({
             pb: 3
           }}
         >
-          {t('dietCalories')}
+          {t('Calories')}
         </Typography>
         <LinearProgress
           value={percentage}

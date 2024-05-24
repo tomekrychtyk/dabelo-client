@@ -35,7 +35,7 @@ export const MealList = () => {
       >
         <Box>
           <Typography gutterBottom variant="h4">
-            {t('dietMealListTitle')}
+            {t('Meal List')}
           </Typography>
         </Box>
       </Box>

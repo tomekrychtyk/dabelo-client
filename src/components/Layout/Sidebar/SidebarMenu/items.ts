@@ -11,7 +11,7 @@ export interface MenuItem {
   icon?: OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & { muiName: string };
   badge?: string;
   badgeTooltip?: string;
-
+  tKey: string;
   items?: MenuItem[];
   name: string;
   key: string;
@@ -22,13 +22,14 @@ export interface MenuItems {
   heading: string;
 }
 
-const menuItems: MenuItems[] = [
+export const menuItems: MenuItems[] = [
   {
     heading: 'Dieta',
     items: [
       {
         name: 'Dziennik',
         key: 'dietDiary',
+        tKey: 'Diet Diary',
         icon: DateRangeTwoTone,
         link: '/diet/diary'
       },
@@ -36,16 +37,16 @@ const menuItems: MenuItems[] = [
         name: 'Moje przepisy',
         icon: FastfoodTwoTone,
         link: '/diet/my-recepies',
-        key: 'dietMyRecepies'
+        key: 'dietMyRecepies',
+        tKey: 'My recepies'
       },
       {
         name: 'Dodaj produkt',
         icon: ControlPointTwoTone,
         link: '/diet/add-product',
-        key: 'dietAddProduct'
+        key: 'dietAddProduct',
+        tKey: 'Add Product'
       }
     ]
   }
 ];
-
-export default menuItems;

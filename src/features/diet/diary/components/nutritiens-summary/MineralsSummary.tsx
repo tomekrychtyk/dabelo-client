@@ -8,7 +8,7 @@ export const MineralsSummary = () => {
 
   return (
     <Grid item sm={6} xs={12}>
-      <Summary data={MINERAL_LIST} title={t('dietMineralsSummry')} expanded />
+      <Summary data={MINERAL_LIST} title={t('Minerals Summary')} expanded />
     </Grid>
   );
 };
