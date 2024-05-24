@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import SuspenseLoader from '../SuspenseLoader/SuspenseLoader';
+import { SuspenseLoader } from '../SuspenseLoader/SuspenseLoader';
 
 function AppInit() {
   return (
